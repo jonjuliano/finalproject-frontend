@@ -1,8 +1,8 @@
 import { render, screen } from "@testing-library/react"
 import Input from "./InputForm";
-import userEvent from "@testing-library/user-event";
+
 import '@testing-library/jest-dom'
-import TextArea from "./TextArea";
+
 
 test("rendering input area", async () => {
     render(<Input 

@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react"
 import TextArea from "./TextArea"
-import userEvent from "@testing-library/user-event"
+
 
 test("rendering text area", () => {
     render(<TextArea 
