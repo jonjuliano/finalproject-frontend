@@ -33,3 +33,24 @@ test("clicking Drink Card Link for Drinks Page", async () => {
     await userEvent.click(screen.getByText("Drink Details"))
     expect(onClick).toHaveBeenCalled();
 })
+
+test("clicking Drink Card Delete Button", async () => {
+    render( <DrinkCard 
+        name="some-name"
+        img="some-img"
+        key="some-id" 
+        >
+            <div>
+            <Link to="some-link" onClick={onClick} className="btn btn-primary">
+                Drink Details
+            </Link>
+
+            <button type="" className="btn-link text-danger m-1 btn" onClick={onClick}>
+                Delete
+            </button>
+            </div>
+        </DrinkCard>, {wrapper: BrowserRouter}) 
+
+    await userEvent.click(screen.getByText("Delete"))
+    expect(onClick).toHaveBeenCalled();
+})

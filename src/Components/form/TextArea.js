@@ -9,6 +9,7 @@ export default function TextArea(props) {
             name={props.name} 
             placeholder={props.placeholder}
             defaultValue={props.defaultValue}
+            onChange={props.onChange}
             required={props.required}/>
             <div className={props.validate}>
                     {props.validateMsg}
